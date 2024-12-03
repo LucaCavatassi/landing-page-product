@@ -1,5 +1,19 @@
 <script>
 export default {
+    data() {
+        return {
+            activeSection: '', // Keeps track of the currently active section
+        };
+    },
+    methods: {
+        scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to section
+                this.activeSection = sectionId; // Set the active section
+            }
+        }
+    },
     mounted() {
         const navbarTogglers = document.querySelectorAll('.navbar-toggler'); // Select both togglers
         const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -82,22 +96,22 @@ export default {
                 <!-- NavBar -->
                 <ul class="navbar-nav ms-auto mb-2 mb-md-0 custom-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a :class="{ active: activeSection === 'home' }" @click.prevent="scrollToSection('home')" class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">I punti di forza</a>
+                        <a :class="{ active: activeSection === 'keyPoints' }" @click.prevent="scrollToSection('keyPoints')" class="nav-link" href="#">I punti di forza</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Recensioni</a>
+                        <a :class="{ active: activeSection === 'reviews' }" @click.prevent="scrollToSection('reviews')" class="nav-link" href="#">Recensioni</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Paperelle</a>
+                        <a :class="{ active: activeSection === 'shop' }" @click.prevent="scrollToSection('shop')" class="nav-link" href="#">Paperelle</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FAQs</a>
+                        <a :class="{ active: activeSection === 'faqs' }" @click.prevent="scrollToSection('faqs')" class="nav-link" href="#">FAQs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#newsletter">Newsletter</a>
+                        <a :class="{ active: activeSection === 'newsletter' }" @click.prevent="scrollToSection('newsletter')" class="nav-link" href="#">Newsletter</a>
                     </li>
                 </ul>
                 <!-- NavBar -->
