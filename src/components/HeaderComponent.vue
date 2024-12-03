@@ -65,7 +65,7 @@ export default {
 </script>
 
 <template>
-    <nav class="navbar navbar-expand-md" aria-label="Navbar">
+    <nav class="navbar navbar-expand-md sticky-top" aria-label="Navbar">
         <div class="container-fluid header-font">
             <!-- Logo -->
             <a class="navbar-brand me-auto" href="#"><img src="../../public/imgs/logo.png" alt="Logo"></a>
