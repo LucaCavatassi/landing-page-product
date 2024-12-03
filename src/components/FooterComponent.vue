@@ -17,9 +17,26 @@
                 </button>
             </form>
 
-            <div class="ms-socials">
-                <svg class="icon" width="36" height="36" fill="currentColor">
-                        <use xlink:href="#send"></use>
+            <div class="ms-socials mb-4 d-flex justify-content-center gap-3">
+                <svg class="icon" width="42" height="42" fill="currentColor">
+                        <use xlink:href="#facebook"></use>
+                </svg>
+
+                <svg class="icon" width="42" height="42" fill="currentColor">
+                        <use xlink:href="#twitter"></use>
+                </svg>
+
+                
+                <svg class="icon" width="42" height="42" fill="currentColor">
+                    <use xlink:href="#youtube"></use>
+                </svg>
+                
+                <svg class="icon" width="42" height="42" fill="currentColor">
+                    <use xlink:href="#linkedin"></use>
+                </svg>
+
+                <svg class="icon" width="42" height="42" fill="currentColor">
+                    <use xlink:href="#instagram"></use>
                 </svg>
             </div>
         </div>
@@ -64,7 +81,7 @@ form {
 }
 .form-control {
     background-color: $grey;
-    border-bottom: 1px solid grey!important;
+    border-bottom: 1px solid lightgray!important;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -102,5 +119,18 @@ form {
 // Socials
 .ms-socials {
     color: $green;
+    .icon {
+        border: 1px solid lightgrey;
+        padding: 0.5rem;
+        border-radius: 50%;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .icon:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        box-shadow: 0 0 0.25rem 0.25rem $green;
+
+    }
 }
 </style>
