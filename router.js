@@ -24,7 +24,7 @@ export const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    const projectName = 'Landing-Page'; // Replace with your project name
+    const projectName = 'DucKing'; // Replace with your project name
     const pageTitle = to.meta.title ? `${projectName} - ${to.meta.title}` : projectName;
     document.title = pageTitle;
     next();
