@@ -11,7 +11,10 @@
             <!-- Toggler Hamburger -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
                 aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <!-- SVG symbol provided by Designer -->
+                <svg class="icon" width="48" height="48" fill="currentColor">
+                    <use xlink:href="#navbar-icon"></use>
+                </svg>
             </button>
             <!-- /Toggler Hamburger -->
 
@@ -64,20 +67,7 @@ nav {
     position: relative;
 }
 
-// Navbar Style Expanded
-.navbar-collapse.show {
-    height: 100vh; // Full height when expanded
-    width: 70%; // Width applied with smooth transition
-    padding-left: 1rem;
-    .navbar-nav {
-        margin-top: 1rem;
-    }
-    .nav-item {
-        padding-bottom: 0.6rem;
-    }
-}
-
-// Navbar Style Closed
+// Navbar Style
 .navbar-collapse {
     background-color: white !important;
     width: 0;
@@ -85,10 +75,26 @@ nav {
     top: 0;
     right: 0;
     z-index: 3;
-    transition: width 0.5s ease-in-out; /* Smooth transition on width */
+    transition: width 0.5s ease-in-out;
+    /* Smooth transition on width */
 }
 
-/* Overlay to back content when has show class so it's expanded */
+// Navbar Style Expanded
+.navbar-collapse.show {
+    height: 100vh; // Full height when expanded
+    width: 70%; // Width applied with smooth transition
+    padding-left: 1rem;
+
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+
+    .nav-item {
+        padding-bottom: 0.6rem;
+    }
+}
+
+// Overlay to back content when has show class so it's expanded
 .navbar:has(.navbar-collapse.show)::after {
     content: '';
     position: fixed;
@@ -99,18 +105,20 @@ nav {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
-// Active link color
+
+// Active link color + weight
 .nav-link.active {
-    color: $blue!important;
-    font-weight: bold!important;
-}
-// No border on button for open/close
-.navbar-toggler {
-    border: none!important;
-}
-// No focus effect on button for open/close
-.navbar-toggler:focus {
-    box-shadow: none!important;
+    color: $blue !important;
+    font-weight: bold !important;
 }
 
+// No border on button for open/close
+.navbar-toggler {
+    border: none !important;
+}
+
+// No focus effect on button for open/close
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
 </style>
