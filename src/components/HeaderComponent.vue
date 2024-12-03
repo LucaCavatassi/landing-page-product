@@ -16,9 +16,9 @@
             <!-- /Toggler Hamburger -->
 
             <!-- Menu -->
-            <div class="collapse navbar-collapse ps-3" id="navbars">
+            <div class="collapse navbar-collapse" id="navbars">
                 <!-- Logo + Close Button -->
-                <div class="d-flex d-md-none justify-content-between">
+                <div class="d-flex d-md-none justify-content-between mt-2">
                     <img src="../../public/imgs/logo.png" alt="Logo">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
                         aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,14 +63,12 @@ nav {
     max-height: 96px;
     position: relative;
 }
-.navbar-collapse {
-    transition: height 0.3s ease-in-out; /* Smooth transition */
-    height: 100%;
-}
 
-// Height Expanded
+// Navbar Style Expanded
 .navbar-collapse.show {
-    height: 100vh; /* Full height when expanded */
+    height: 100vh; // Full height when expanded
+    width: 70%; // Width applied with smooth transition
+    padding-left: 1rem;
     .navbar-nav {
         margin-top: 1rem;
     }
@@ -79,14 +77,15 @@ nav {
     }
 }
 
-// Navbar Style Expanded
+// Navbar Style Closed
 .navbar-collapse {
     background-color: white !important;
-    width: 70%;
+    width: 0;
     position: absolute;
     top: 0;
     right: 0;
     z-index: 3;
+    transition: width 0.5s ease-in-out; /* Smooth transition on width */
 }
 
 /* Overlay to back content when has show class so it's expanded */

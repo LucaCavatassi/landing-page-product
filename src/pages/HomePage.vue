@@ -12,7 +12,7 @@
 
 <template>
     <HeaderComponent />
-    <div class="bg-dark">
+    <div class="bg-dark vh-100">
         <h1 class="body-font">HomePage</h1>
     </div>
     <FooterComponent />
