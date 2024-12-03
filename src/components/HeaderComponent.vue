@@ -5,7 +5,7 @@
     <nav class="navbar navbar-expand-md" aria-label="Navbar">
         <div class="container header-font">
             <!-- Logo -->
-            <a class="navbar-brand" href="#"><img src="../../public/imgs/logo.png" alt="Logo"></a>
+            <a class="navbar-brand m-auto" href="#"><img src="../../public/imgs/logo.png" alt="Logo"></a>
             <!-- /Logo -->
             
             <!-- Toggler Hamburger -->
@@ -46,7 +46,12 @@
 <style scoped lang="scss">
     @import '../style/general.scss';
 
+    nav {
+        max-height: 96px;
+    }
+
     .nav-link.active {
         color: $blue!important
     }
+
 </style>
