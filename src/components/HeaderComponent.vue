@@ -1,27 +1,45 @@
 <script>
 export default {
     mounted() {
-        // Attach click event to the navbar toggler
         const navbarToggler = document.querySelector('.navbar-toggler');
         const navbarCollapse = document.querySelector('.navbar-collapse');
+        const navLinks = document.querySelectorAll('.nav-link');
 
         if (navbarToggler && navbarCollapse) {
             navbarToggler.addEventListener('click', () => {
-                // Temporarily disable Bootstrap's collapsing behavior
-                navbarCollapse.style.transition = 'none';
+                // Toggle body scrolling
+                if (navbarCollapse.classList.contains('show')) {
+                    document.body.style.overflow = ''; // Enable scrolling
+                } else {
+                    document.body.style.overflow = 'hidden'; // Disable scrolling
+                }
+            });
 
-                // Restore custom transitions after a short delay
-                setTimeout(() => {
-                    navbarCollapse.style.transition = ''; // Restore smooth transitions
-                }, 10);
+            // Close navbar and enable scrolling when a nav link is clicked
+            navLinks.forEach((link) => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 767) {
+                        navbarCollapse.classList.remove('show'); // Close navbar
+                        document.body.style.overflow = ''; // Enable scrolling
+                    }
+                });
             });
         }
     },
     beforeUnmount() {
-        // Cleanup the event listener when the component is destroyed
+        // Cleanup event listeners
         const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const navLinks = document.querySelectorAll('.nav-link');
+
         if (navbarToggler) {
             navbarToggler.removeEventListener('click', this.handleNavbarClick);
+        }
+
+        if (navLinks) {
+            navLinks.forEach((link) => {
+                link.removeEventListener('click', this.handleNavLinkClick);
+            });
         }
     },
     methods: {
@@ -33,8 +51,15 @@ export default {
                     navbarCollapse.style.transition = '';
                 }, 10);
             }
-        }
-    }
+        },
+        handleNavLinkClick() {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (window.innerWidth <= 767 && navbarCollapse) {
+                navbarCollapse.classList.remove('show');
+                document.body.style.overflow = ''; // Enable scrolling
+            }
+        },
+    },
 };
 </script>
 
