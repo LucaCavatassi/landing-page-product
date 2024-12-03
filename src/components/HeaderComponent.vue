@@ -45,4 +45,8 @@
 
 <style scoped lang="scss">
     @import '../style/general.scss';
+
+    .nav-link.active {
+        color: $blue!important
+    }
 </style>
