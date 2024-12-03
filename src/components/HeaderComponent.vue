@@ -25,7 +25,7 @@
                     <img src="../../public/imgs/logo.png" alt="Logo">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
                         aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
-                        <font-awesome-icon icon="close" />
+                        <font-awesome-icon icon="close" class="fa-lg" />
                     </button>
                 </div>
                 <!-- Logo + Close Button -->
