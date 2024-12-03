@@ -28,7 +28,7 @@
                 <!-- Logo + Close Button -->
 
                 <!-- NavBar -->
-                <ul class="navbar-nav ms-auto mb-2 mt-3 mb-md-0 custom-nav">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0 custom-nav">
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Home</a>
                     </li>
@@ -65,12 +65,15 @@ nav {
 }
 .navbar-collapse {
     transition: height 0.3s ease-in-out; /* Smooth transition */
-    height: auto;
+    height: 100%;
 }
 
 // Height Expanded
 .navbar-collapse.show {
     height: 100vh; /* Full height when expanded */
+    .navbar-nav {
+        margin-top: 1rem;
+    }
     .nav-item {
         padding-bottom: 0.6rem;
     }
