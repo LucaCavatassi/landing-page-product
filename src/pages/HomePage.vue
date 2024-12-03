@@ -12,7 +12,9 @@
 
 <template>
     <HeaderComponent />
-    <h1 class="body-font">HomePage</h1>
+    <div class="container">
+        <h1 class="body-font">HomePage</h1>
+    </div>
     <FooterComponent />
 </template>
 
