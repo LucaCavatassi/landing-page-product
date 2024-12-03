@@ -6,6 +6,8 @@
   <!-- <font-awesome-icon icon="coffee" /> -->
 </template>
 
-<style scoped lang="scss">
-
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
 </style>

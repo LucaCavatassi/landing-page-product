@@ -85,7 +85,7 @@ export default {
                         <a class="nav-link" href="#">FAQs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Newsletter</a>
+                        <a class="nav-link" href="#newsletter">Newsletter</a>
                     </li>
                 </ul>
                 <!-- NavBar -->

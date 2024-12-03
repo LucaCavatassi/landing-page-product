@@ -12,7 +12,7 @@
 
 <template>
     <HeaderComponent />
-    <div class="body-font bg-dark">
+    <div class="body-font bg-dark vh-100">
         <h1>CENTRAL</h1>
     </div>
     <FooterComponent />

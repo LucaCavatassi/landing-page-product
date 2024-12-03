@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <footer>
+    <footer id="newsletter">
         <!-- Newsletter -->
         <div class="grey-bg d-flex justify-content-center">
             <div class="ms-container body-font">
