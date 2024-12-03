@@ -128,11 +128,14 @@ export default {
 nav {
     max-height: 96px;
     position: relative;
+    background-color: white !important;
 }
+
 
 // Navbar Style (Mobile default)
 .navbar-collapse {
     background-color: white !important;
+
     width: 0; // Start collapsed
     overflow: hidden;
     transition: width 0.5s ease-in-out !important; // Smooth width transition

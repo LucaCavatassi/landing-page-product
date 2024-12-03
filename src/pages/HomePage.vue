@@ -15,7 +15,7 @@
 
 <template>
     <HeaderComponent />
-    <div class="body-font">
+    <div class="body-font bg-dark">
         <JumboComponent/>
     </div>
     <FooterComponent />
