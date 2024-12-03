@@ -98,7 +98,7 @@ export default {
 <style scoped lang="scss">
 @import '../style/general.scss';
 
-// Height Closed
+// Height
 nav {
     max-height: 96px;
     position: relative;
@@ -108,10 +108,11 @@ nav {
 .navbar-collapse {
     background-color: white !important;
     width: 0; // Start collapsed
-    overflow: hidden; // Prevent content overflow
+    overflow: hidden;
     transition: width 0.5s ease-in-out !important; // Smooth width transition
     visibility: hidden; // Initially hidden
 
+    // When toggled shows apply 
     &.show {
         position: absolute;
         top: 0;
