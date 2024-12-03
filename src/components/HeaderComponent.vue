@@ -1,18 +1,22 @@
 <script>
 export default {
     mounted() {
-        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarTogglers = document.querySelectorAll('.navbar-toggler'); // Select both togglers
         const navbarCollapse = document.querySelector('.navbar-collapse');
         const navLinks = document.querySelectorAll('.nav-link');
 
-        if (navbarToggler && navbarCollapse) {
-            navbarToggler.addEventListener('click', () => {
-                // Toggle body scrolling
-                if (navbarCollapse.classList.contains('show')) {
-                    document.body.style.overflow = ''; // Enable scrolling
-                } else {
-                    document.body.style.overflow = 'hidden'; // Disable scrolling
-                }
+        if (navbarTogglers && navbarCollapse) {
+            navbarTogglers.forEach((toggler) => {
+                toggler.addEventListener('click', () => {
+                    setTimeout(() => {
+                        // Check if the navbar is open or closed after Bootstrap transition
+                        if (navbarCollapse.classList.contains('show')) {
+                            document.body.style.overflow = 'hidden'; // Disable scrolling when open
+                        } else {
+                            document.body.style.overflow = ''; // Enable scrolling when closed
+                        }
+                    }, 300); // Delay to sync with Bootstrap's animation timing
+                });
             });
 
             // Close navbar and enable scrolling when a nav link is clicked
@@ -28,38 +32,21 @@ export default {
     },
     beforeUnmount() {
         // Cleanup event listeners
-        const navbarToggler = document.querySelector('.navbar-toggler');
-        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const navbarTogglers = document.querySelectorAll('.navbar-toggler');
         const navLinks = document.querySelectorAll('.nav-link');
 
-        if (navbarToggler) {
-            navbarToggler.removeEventListener('click', this.handleNavbarClick);
+        if (navbarTogglers) {
+            navbarTogglers.forEach((toggler) => {
+                toggler.removeEventListener('click', () => {});
+            });
         }
 
         if (navLinks) {
             navLinks.forEach((link) => {
-                link.removeEventListener('click', this.handleNavLinkClick);
+                link.removeEventListener('click', () => {});
             });
         }
-    },
-    methods: {
-        handleNavbarClick() {
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-            if (navbarCollapse) {
-                navbarCollapse.style.transition = 'none';
-                setTimeout(() => {
-                    navbarCollapse.style.transition = '';
-                }, 10);
-            }
-        },
-        handleNavLinkClick() {
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-            if (window.innerWidth <= 767 && navbarCollapse) {
-                navbarCollapse.classList.remove('show');
-                document.body.style.overflow = ''; // Enable scrolling
-            }
-        },
-    },
+    }
 };
 </script>
 
