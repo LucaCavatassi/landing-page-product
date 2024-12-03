@@ -68,7 +68,7 @@ export default {
     <nav class="navbar navbar-expand-md sticky-top" aria-label="Navbar">
         <div class="container-fluid header-font">
             <!-- Logo -->
-            <a class="navbar-brand me-auto" href="#"><img src="../../public/imgs/logo.png" alt="Logo"></a>
+            <a class="navbar-brand me-auto" href="#"><img src="/imgs/logo.png" alt="Logo"></a>
             <!-- /Logo -->
 
             <!-- Toggler Hamburger -->

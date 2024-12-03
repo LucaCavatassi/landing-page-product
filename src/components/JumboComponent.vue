@@ -2,10 +2,10 @@
 </script>
 
 <template>
-    <div class="container vh-100">
+    <div class="container body-font">
         <div class="row" id="home">
             <div class="col-12 col-md-6">
-                <h1>ciao</h1>
+                <img class="img-fluid" src="/imgs/banner-bg.png" alt="">
             </div>
             <div class="col-12 col-md-6">
 
