@@ -12,8 +12,8 @@
 
 <template>
     <HeaderComponent />
-    <div class="bg-dark vh-100">
-        <h1 class="body-font">HomePage</h1>
+    <div class="body-font bg-dark">
+        <h1>CENTRAL</h1>
     </div>
     <FooterComponent />
 </template>

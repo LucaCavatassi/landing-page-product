@@ -1,4 +1,41 @@
 <script>
+export default {
+    mounted() {
+        // Attach click event to the navbar toggler
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        if (navbarToggler && navbarCollapse) {
+            navbarToggler.addEventListener('click', () => {
+                // Temporarily disable Bootstrap's collapsing behavior
+                navbarCollapse.style.transition = 'none';
+
+                // Restore custom transitions after a short delay
+                setTimeout(() => {
+                    navbarCollapse.style.transition = ''; // Restore smooth transitions
+                }, 10);
+            });
+        }
+    },
+    beforeUnmount() {
+        // Cleanup the event listener when the component is destroyed
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        if (navbarToggler) {
+            navbarToggler.removeEventListener('click', this.handleNavbarClick);
+        }
+    },
+    methods: {
+        handleNavbarClick() {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse) {
+                navbarCollapse.style.transition = 'none';
+                setTimeout(() => {
+                    navbarCollapse.style.transition = '';
+                }, 10);
+            }
+        }
+    }
+};
 </script>
 
 <template>
@@ -67,43 +104,84 @@ nav {
     position: relative;
 }
 
-// Navbar Style
+// Navbar Style (Mobile default)
 .navbar-collapse {
     background-color: white !important;
-    width: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 3;
-    transition: width 0.5s ease-in-out;
-    /* Smooth transition on width */
-}
+    width: 0; // Start collapsed
+    overflow: hidden; // Prevent content overflow
+    transition: width 0.5s ease-in-out !important; // Smooth width transition
+    visibility: hidden; // Initially hidden
 
-// Navbar Style Expanded
-.navbar-collapse.show {
-    height: 100vh; // Full height when expanded
-    width: 70%; // Width applied with smooth transition
-    padding-left: 1rem;
-
-    .navbar-nav {
-        margin-top: 1rem;
-    }
-
-    .nav-item {
-        padding-bottom: 0.6rem;
+    &.show {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        height: 100vh; // Full height when expanded
+        width: 70%; // Expanded width
+        padding-left: 1rem; // Add padding for menu items
+        visibility: visible; // Make visible when expanded
     }
 }
 
-// Overlay to back content when has show class so it's expanded
-.navbar:has(.navbar-collapse.show)::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;
+// Override Bootstrap collapsing behavior
+.navbar-collapse.collapsing {
+    height: auto !important; // Disable height transition
+    display: block !important; // Ensure visible during transition
+    overflow: hidden !important; // Prevent overflow
+    transition: none !important; // Disable Bootstrap's default animation
+}
+
+// Prevent flicker (mobile-specific)
+@media (max-width: 767.98px) {
+    .collapse:not(.show) {
+        width: 0 !important; // Collapse width
+        visibility: hidden !important; // Hide when collapsed
+    }
+
+    .collapse.show {
+        width: 70% !important; // Expanded width
+        visibility: visible !important; // Ensure visibility
+    }
+}
+
+// Desktop behavior
+@media (min-width: 768px) {
+    .navbar-collapse {
+        overflow: visible !important; // Allow content to flow
+        width: auto !important; // Reset width
+        height: auto !important; // Reset height
+        position: static !important; // Default Bootstrap behavior
+        display: flex !important; // Inline menu for desktop
+        transition: none !important; // No transitions
+        visibility: visible !important; // Always visible
+    }
+
+    .collapse:not(.show) {
+        display: flex !important; // Always visible
+        visibility: visible !important; // Ensure visibility
+    }
+}
+
+// Overlay for expanded navbar (mobile only)
+@media (max-width: 767.98px) {
+    .navbar:has(.navbar-collapse.show)::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5); // Dark overlay
+        z-index: 2;
+        opacity: 1; // Fully visible
+        transition: opacity 0.5s ease-in-out; // Smooth fade-in
+    }
+
+    .navbar:has(.navbar-collapse:not(.show))::after {
+        opacity: 0; // Hide overlay
+        pointer-events: none; // Prevent interaction
+    }
 }
 
 // Active link color + weight
@@ -117,7 +195,7 @@ nav {
     border: none !important;
 }
 
-// No focus effect on button for open/close
+// Remove focus styles from toggler
 .navbar-toggler:focus {
     box-shadow: none !important;
 }
