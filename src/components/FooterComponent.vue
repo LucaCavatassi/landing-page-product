@@ -2,53 +2,70 @@
 </script>
 
 <template>
-    <div class="grey-bg d-flex justify-content-center">
-        <div class="ms-container body-font">
-            <h2 class="mb-0 text-center font-size-big px-4 px-md-5 py-3 fw-bold black-text">Iscriviti per rimanere
-                aggiornato</h2>
-            <p class="fs-6 text-center">Iscriviti alla nostra newsletter per rimanere aggiornato su sconti e novità</p>
-
-            <form class="mb-5 d-flex align-items-center" action="">
-                <input class="ps-0 w-100 form-control" type="email" placeholder="Lascia la tua email qui..."
-                    aria-label="Email Input Newsletter">
-                <button id="newsletter-btn" type="submit">
-                    <!-- SVG symbol provided by Designer -->
-                    <svg class="icon" width="36" height="36" fill="currentColor">
-                        <use xlink:href="#send"></use>
-                    </svg>
-                </button>
-            </form>
-
-            <div class="ms-socials mb-4 d-flex justify-content-center gap-3">
-                <a target="_blank" href="https://github.com/LucaCavatassi/landing-page-product">
-                    <svg class="icon" width="42" height="42" fill="currentColor">
-                        <use xlink:href="#facebook"></use>
-                    </svg>
-                </a>
-                <a target="_blank" href="https://github.com/LucaCavatassi/landing-page-product">
-                    <svg class="icon" width="42" height="42" fill="currentColor">
-                        <use xlink:href="#twitter"></use>
-                    </svg>
-                </a>
-                <a target="_blank" href="https://github.com/LucaCavatassi/landing-page-product">
-                    <svg class="icon" width="42" height="42" fill="currentColor">
-                        <use xlink:href="#youtube"></use>
-                    </svg>
-                </a>
-                <a target="_blank" href="https://github.com/LucaCavatassi/landing-page-product">
-                    <svg class="icon" width="42" height="42" fill="currentColor">
-                        <use xlink:href="#linkedin"></use>
-                    </svg>
-                </a>
-                <a target="_blank" href="https://github.com/LucaCavatassi/landing-page-product">
-                    <svg class="icon" width="42" height="42" fill="currentColor">
-                        <use xlink:href="#instagram"></use>
-                    </svg>
-                </a>
+    <footer>
+        <!-- Newsletter -->
+        <div class="grey-bg d-flex justify-content-center">
+            <div class="ms-container body-font">
+                <!-- Info Text -->
+                <h2 class="mb-0 text-center font-size-big px-4 px-md-5 py-3 fw-bold black-text">Iscriviti per rimanere
+                    aggiornato</h2>
+                <p class="fs-6 text-center">Iscriviti alla nostra newsletter per rimanere aggiornato su sconti e novità</p>
+                <!-- /Info Text -->
+    
+                <!-- Newsletter Form -->
+                <form class="mb-5 d-flex align-items-center" action="">
+                    <input class="ps-0 w-100 form-control" type="email" placeholder="Lascia la tua email qui..."
+                        aria-label="Email Input Newsletter">
+                    <button id="newsletter-btn" type="submit">
+                        <!-- SVG symbol provided by Designer -->
+                        <svg class="icon" width="36" height="36" fill="currentColor">
+                            <use xlink:href="#send"></use>
+                        </svg>
+                    </button>
+                </form>
+                <!-- /Newsletter Form -->
+    
+                <!-- Socials -->
+                <div class="ms-socials mb-4 d-flex justify-content-center gap-3">
+                    <a target="_blank" href="https://github.com/LucaCavatassi/landing-page-product">
+                        <svg class="icon" width="42" height="42" fill="currentColor">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://github.com/LucaCavatassi/landing-page-product">
+                        <svg class="icon" width="42" height="42" fill="currentColor">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://github.com/LucaCavatassi/landing-page-product">
+                        <svg class="icon" width="42" height="42" fill="currentColor">
+                            <use xlink:href="#youtube"></use>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://github.com/LucaCavatassi/landing-page-product">
+                        <svg class="icon" width="42" height="42" fill="currentColor">
+                            <use xlink:href="#linkedin"></use>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://github.com/LucaCavatassi/landing-page-product">
+                        <svg class="icon" width="42" height="42" fill="currentColor">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                </div>
+                <!-- /Socials -->
             </div>
         </div>
-    </div>
+        <!-- /Newsletter -->
+
+        <!-- Copyright -->
+        <div>
+            <h6 class="text-center m-3">© 2024 Boolanding Product - Designed by Boolean</h6>
+        </div>
+        <!-- /Copyright -->
+    </footer>
 </template>
+
 
 <style scoped lang="scss">
 @import '../style/general.scss';
@@ -143,5 +160,10 @@ form {
         cursor: pointer;
         box-shadow: 0 0.3rem 0.3rem -0.25rem $green;
     }
+}
+
+h6 {
+    color: $black;
+    font-weight: lighter;
 }
 </style>
