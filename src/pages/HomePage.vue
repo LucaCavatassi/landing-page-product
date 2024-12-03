@@ -1,9 +1,19 @@
 <script>
+    import HeaderComponent from '../components/HeaderComponent.vue';
+    import FooterComponent from '../components/FooterComponent.vue';
 
+    export default {
+        components: {
+            HeaderComponent,
+            FooterComponent
+        },
+    }
 </script>
 
 <template>
-    <h1>HomePage</h1>
+    <HeaderComponent />
+    <h1 class="body-font">HomePage</h1>
+    <FooterComponent />
 </template>
 
 <style scoped lang="scss">
