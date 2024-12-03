@@ -16,6 +16,12 @@
                     </svg>
                 </button>
             </form>
+
+            <div class="ms-socials">
+                <svg class="icon" width="36" height="36" fill="currentColor">
+                        <use xlink:href="#send"></use>
+                </svg>
+            </div>
         </div>
     </div>
 </template>
@@ -81,14 +87,20 @@ form {
     border: none;
     padding: 0;
     cursor: pointer;
+    color: $green;
 
-    svg.icon {
-        fill: $green!important;
+    .icon {
         transition: transform 0.2s ease-in-out;
     }
 
-    &:hover svg.icon {
-        transform: scale(1.1); // Slight zoom on hover
+    .icon:hover {
+        transform: scale(1.1);
     }
+    
+}
+
+// Socials
+.ms-socials {
+    color: $green;
 }
 </style>
