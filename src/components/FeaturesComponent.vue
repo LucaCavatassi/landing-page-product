@@ -40,7 +40,7 @@
         <div class="container mt-5">
             <div class="row row-cols-1 row-cols-md-3">
                 <!-- Features Left -->
-                <div class="col black-text body-font text-center">
+                <div class="col text-center">
                     <div class="mb-5" v-for="feature in featuresLeft">
                         <h4 class="px-5 px-md-3 fw-semibold mb-0">{{feature.title}}</h4>
                         <span>{{ feature.description }}</span>
@@ -53,15 +53,13 @@
                 <!-- /Img -->
 
                 <!-- Features Right -->
-                <div class="col black-text body-font text-center">
+                <div class="col text-center">
                     <div class="mb-5" v-for="feature in featuresRight">
                         <h4 class="px-5 px-md-3 fw-semibold mb-0">{{feature.title}}</h4>
                         <span>{{ feature.description }}</span>
                     </div>
                 </div>
                 <!-- /Features Right -->
-            </div>
-            <div class="row">
             </div>
         </div>
     </div>

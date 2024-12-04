@@ -3,13 +3,15 @@
     import FooterComponent from '../components/FooterComponent.vue';
     import JumboComponent from '../components/JumboComponent.vue';
     import FeaturesComponent from '../components/FeaturesComponent.vue';
+    import ReviewsComponent from '../components/ReviewsComponent.vue';
 
     export default {
         components: {
             HeaderComponent,
             FooterComponent,
             JumboComponent,
-            FeaturesComponent
+            FeaturesComponent,
+            ReviewsComponent
         },
     }
 </script>
@@ -18,6 +20,7 @@
     <HeaderComponent />
     <JumboComponent/>
     <FeaturesComponent/>
+    <ReviewsComponent/>
     <FooterComponent />
 </template>
 
