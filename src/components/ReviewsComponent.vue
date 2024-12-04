@@ -30,8 +30,8 @@ export default {
                 },
                 {
                     description: "La mia paperella di gomma è il miglior collega che potessi chiedere. Sempre pronta ad ascoltare, mai giudicante. È sorprendente come qualcosa di così semplice possa essere così efficace nel risolvere problemi complessi. E non dimentichiamo che è anche adorabile!",
-                    date: "Park C",
-                    name: "May 22, 2023"
+                    date: "May 22, 2023",
+                    name: "Park C"
                 },
             ]
         }

@@ -10,7 +10,11 @@ export default {
 </script>
 
 <template>
-    <h1>Card</h1>
+    <div class="review-card">
+        <p>{{ review.description }}</p>
+        <p>{{ review.name }}</p>
+        <p>{{ review.date }}</p>
+    </div>
 </template>
 
 <style>
