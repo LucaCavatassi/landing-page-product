@@ -43,7 +43,7 @@ export default {
     <div id="reviews">
         <div class="container mb-2">
             <h2 class="fw-bold text-center">Cosa ne pensano i nostri sviluppatori</h2>
-            <Carousel :items-to-show="1" :autoplay="4000" wrap-around pause-autoplay-on-hover 
+            <Carousel :items-to-show="1" :items-to-scroll="1"  wrap-around pause-autoplay-on-hover :snapAlign="center-even" :height="auto"
             :breakpoints="{
                 768: { itemsToShow: 2 }, // On tablets, show 2 items per slide
                 1024: { itemsToShow: 3 } // On desktops, show 3 items per slide

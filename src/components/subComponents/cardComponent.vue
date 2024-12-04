@@ -12,7 +12,7 @@ export default {
 <template>
     <div class="review-card">
         <!-- Review -->
-        <p>"{{ review.description }}"</p>
+        <p class="r-height">"{{ review.description }}"</p>
         <!-- /Review -->
 
         <!-- Stars -->
@@ -32,5 +32,7 @@ export default {
 </template>
 
 <style>
-
+    .r-height{
+        min-height: 119px;
+    }
 </style>
