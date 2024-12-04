@@ -1,14 +1,14 @@
 <script>
 import cardComponent from './subComponents/cardComponent.vue';
 import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide, Navigation } from 'vue3-carousel';
+import { Carousel, Slide, Pagination } from 'vue3-carousel';
 
 export default {
     components: {
         cardComponent,
         Carousel,
         Slide,
-        Navigation
+        Pagination
     },
     data() {
         return {
@@ -49,7 +49,11 @@ export default {
                         <cardComponent :review="review" />
                     </div>
                 </Slide>
+                <template #addons>
+                    <Pagination />
+                </template>
             </Carousel>
+
         </div>
     </div>
 </template>

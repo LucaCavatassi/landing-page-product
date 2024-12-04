@@ -2,7 +2,7 @@
 export default {
     props: {
             review: {
-            type: Object, // or the appropriate type of your review data
+            type: Object,
             required: true
             }
         }
@@ -11,9 +11,23 @@ export default {
 
 <template>
     <div class="review-card">
-        <p>{{ review.description }}</p>
-        <p>{{ review.name }}</p>
-        <p>{{ review.date }}</p>
+        <!-- Review -->
+        <p>"{{ review.description }}"</p>
+        <!-- /Review -->
+
+        <!-- Stars -->
+        <div class="my-2">
+            <font-awesome-icon class="text-warning" icon="star" />
+            <font-awesome-icon class="text-warning" icon="star" />
+            <font-awesome-icon class="text-warning" icon="star" />
+            <font-awesome-icon class="text-warning" icon="star" />
+            <font-awesome-icon class="text-warning" icon="star" />
+        </div>
+        <!-- /Stars -->
+
+        <!-- Name + Date -->
+        <p class="fw-bold">{{ review.name }} - {{ review.date }}</p>
+        <!-- /Name + Date -->
     </div>
 </template>
 
