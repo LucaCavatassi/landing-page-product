@@ -39,14 +39,14 @@
     <div id="features">
         <div class="container mt-5">
             <div class="row row-cols-1 row-cols-md-3">
-                <div class="col justify-content-center align-items-center g-2 black-text body-font text-center">
+                <div class="col black-text body-font text-center">
                     <div class="mb-5" v-for="feature in featuresLeft">
                         <h4 class="px-5 px-md-3 fw-semibold mb-0">{{feature.title}}</h4>
                         <span>{{ feature.description }}</span>
                     </div>
                 </div>
-                <div class="col">Column</div>
-                <div class="col justify-content-center align-items-center g-2 black-text body-font text-center">
+                <div class="col d-flex justify-content-center align-items-center "><img class="img-fluid" src="/imgs/invisible.png" alt=""></div>
+                <div class="col black-text body-font text-center">
                     <div class="mb-5" v-for="feature in featuresRight">
                         <h4 class="px-5 px-md-3 fw-semibold mb-0">{{feature.title}}</h4>
                         <span>{{ feature.description }}</span>

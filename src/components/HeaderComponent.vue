@@ -99,7 +99,7 @@ export default {
                         <a :class="{ active: activeSection === 'home' }" @click.prevent="scrollToSection('home')" class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a :class="{ active: activeSection === 'features' }" @click.prevent="scrollToSection('keyPoints')" class="nav-link" href="#">I punti di forza</a>
+                        <a :class="{ active: activeSection === 'features' }" @click.prevent="scrollToSection('features')" class="nav-link" href="#">I punti di forza</a>
                     </li>
                     <li class="nav-item">
                         <a :class="{ active: activeSection === 'reviews' }" @click.prevent="scrollToSection('reviews')" class="nav-link" href="#">Recensioni</a>
