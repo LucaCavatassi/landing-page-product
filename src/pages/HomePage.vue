@@ -18,9 +18,11 @@
 
 <template>
     <HeaderComponent />
-    <JumboComponent/>
-    <FeaturesComponent/>
-    <ReviewsComponent/>
+    <div class="black-text body-font">
+        <JumboComponent/>
+        <FeaturesComponent/>
+        <ReviewsComponent/>
+    </div>
     <FooterComponent />
 </template>
 
