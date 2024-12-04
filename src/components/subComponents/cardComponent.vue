@@ -35,10 +35,4 @@ export default {
     .r-height{
         min-height: 119px;
     }
-
-    @media (min-width: 992px) {
-        /* .r-height{
-        min-height: 160px;
-        } */
-    }
 </style>
