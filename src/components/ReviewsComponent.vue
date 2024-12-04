@@ -43,21 +43,37 @@ export default {
     <div id="reviews">
         <div class="container mb-2">
             <h2 class="fw-bold text-center">Cosa ne pensano i nostri sviluppatori</h2>
-            <Carousel :items-to-show="1" :items-to-scroll="1"  wrap-around pause-autoplay-on-hover :snapAlign="center-even" :height="auto"
-            :breakpoints="{
-                768: { itemsToShow: 2 }, // On tablets, show 2 items per slide
-                1024: { itemsToShow: 3 } // On desktops, show 3 items per slide
-            }">
-                <Slide v-for="review in reviews" :key="review">
-                    <div class="carousel__item">
-                        <cardComponent :review="review" />
-                    </div>
-                </Slide>
+            <!-- Main Wrapper -->
+            <Carousel 
+                :items-to-show="1" 
+                :items-to-scroll="1" 
+                :autoplay="4000" 
+                wrap-around 
+                pause-autoplay-on-hover
+                :snapAlign="center - even" 
+                :height="auto" 
+                :breakpoints="{
+                    768: { itemsToShow: 2 }, // On tablets, show 2 items per slide
+                    1024: { itemsToShow: 3 } // On desktops, show 3 items per slide
+                }">
+
+                <!-- Slides -->
+                <template #slides>
+                    <Slide v-for="review in reviews" :key="review">
+                        <div class="carousel__item">
+                            <cardComponent :review="review" />
+                        </div>
+                    </Slide>
+                </template>
+                <!-- /Slides -->
+
+                <!-- Pagination Dots -->
                 <template #addons>
                     <Pagination />
                 </template>
+                <!-- /Pagination Dots -->
             </Carousel>
-
+            <!-- /Main Wrapper -->
         </div>
     </div>
 </template>
@@ -72,6 +88,4 @@ h2 {
         font-size: 2.5rem !important;
     }
 }
-
-
 </style>
