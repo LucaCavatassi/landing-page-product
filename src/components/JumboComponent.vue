@@ -8,7 +8,7 @@
                 <img src="/imgs/banner-image.png" alt="duck image">
             </div>
             <div class="col-12 col-sm-6">
-                <div id="cta-text" class="black-text text-center d-flex flex-column px-3 align-items-center mt-4 px-0 px-md-5">
+                <div id="cta-text" class="black-text text-center d-flex flex-column px-3 align-items-center mt-5 mt-sm-4 px-0 px-md-5">
                     <h2 class="fw-bold mb-0">Rubber Ducks Debuggings</h2>
                     <p class="">Spiegare il codice a una paperella di gomma aiuta i programmatori a chiarire il pensiero e individuare errori nascosti.</p>
                     <div class="">
