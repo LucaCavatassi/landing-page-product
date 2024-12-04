@@ -26,7 +26,7 @@ export default {
         <!-- /Stars -->
 
         <!-- Name + Date -->
-        <p class="fw-bold">{{ review.name }} - {{ review.date }}</p>
+        <p class="fw-bold mb-4">{{ review.name }} - {{ review.date }}</p>
         <!-- /Name + Date -->
     </div>
 </template>

@@ -41,7 +41,7 @@ export default {
 
 <template>
     <div id="reviews">
-        <div class="container">
+        <div class="container mb-2">
             <h2 class="fw-bold text-center">Cosa ne pensano i nostri sviluppatori</h2>
             <Carousel :autoplay="4000" wrap-around pause-autoplay-on-hover>
                 <Slide v-for="review in reviews" :key="review">
