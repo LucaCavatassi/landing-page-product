@@ -1,9 +1,12 @@
 <script>
     import cardComponent from './subComponents/cardComponent.vue';
-
+    import { Carousel, Slide } from 'vue-carousel';
+    
     export default {
         components: {
             cardComponent,
+            Carousel,
+            Slide
         }
     }
 </script>
@@ -12,7 +15,17 @@
     <div id="reviews">
         <div class="container">
             <h2 class="fw-bold text-center">Cosa ne pensano i nostri sviluppatori</h2>
-            <cardComponent/>
+            <Carousel>
+                <Slide>
+                    <cardComponent/>
+                </Slide>
+                <Slide>
+                    <cardComponent/>  
+                </Slide>
+                <Slide>
+                    <cardComponent/>  
+                </Slide>
+            </Carousel>
         </div>
     </div>
 </template>

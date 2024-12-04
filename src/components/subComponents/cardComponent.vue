@@ -30,7 +30,7 @@ export default {
 </script>
 
 <template>
-    <h1>H!</h1>
+    <h1>Card</h1>
 </template>
 
 <style>
