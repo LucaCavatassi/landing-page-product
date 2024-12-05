@@ -31,10 +31,10 @@ import FaqsAccordionComponent from './subComponents/faqsAccordionComponent.vue';
 </script>
 
 <template>
-    <div id="faqs" class="container mt-4">
+    <div id="faqs" class="container my-4">
         <h1 class="text-uppercase fw-bold text-left text-md-center mb-4">faqs</h1>
         <div class="row">
-            <div class="col-12 col-md-5 px-md-1">
+            <div class="col-12 col-md-5 px-md-1 ">
                 <img class="img-fluid" src="/public/imgs/single-image2.png" alt="girl-img">
             </div>
             <div class="col-12 col-md-7 px-md-1">
@@ -46,5 +46,15 @@ import FaqsAccordionComponent from './subComponents/faqsAccordionComponent.vue';
 
 <style scoped lang="scss">
     @import '../style/general.scss';
-
+    
+    .col-md-5 {
+        height: 100%;
+        display: flex;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
 </style>

@@ -10,13 +10,13 @@ export default {
 </script>
 
 <template>
-    <div class="accordion my-4 " id="myAccordion">
+    <div class="accordion" id="myAccordion">
         <!-- ITEM-->
         <div class="accordion-item" v-for="(question, index) in questions" :key="index">
             <!-- Question -->
             <h2 class="accordion-header" :id="'heading' + index">
                 <button type="button" 
-                    class="accordion-button collapsed fw-bold" 
+                    class="accordion-button collapsed fw-bold pe-2" 
                     data-bs-toggle="collapse"
                     :data-bs-target="'#collapse' + index" 
                     aria-expanded="false" 
