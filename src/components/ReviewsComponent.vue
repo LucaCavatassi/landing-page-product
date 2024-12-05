@@ -41,7 +41,7 @@ export default {
 
 <template>
     <div id="reviews">
-        <div class="container mb-2 p-4">
+        <div class="container mb-2 p-4 pt-0">
             <h2 class="fw-bold text-center">Cosa ne pensano i nostri sviluppatori</h2>
             <!-- Main Wrapper -->
             <Carousel 
@@ -81,12 +81,12 @@ export default {
 <style scoped lang="scss">
 @import '../style/general.scss';
 h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 @media (min-width: 576px) {
     h2 {
-        font-size: 2.5rem !important;
+        font-size: 3rem !important;
     }
 }
 </style>
