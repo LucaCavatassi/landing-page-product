@@ -2,7 +2,7 @@
     export default {
         data() {
             return {
-                reviews: [
+                questions: [
                     {
                         question: "Come posso utilizzare la paperella di gomma per il debugging?",
                         answer: "Il rubber duck debugging è semplice: spiega il tuo codice alla paperella di gomma come se fosse un collega. Descrivendo ogni passo, potresti individuare errori o capire meglio il problema. La paperella non risponde, ma ti aiuta a chiarire i tuoi pensieri."
@@ -33,7 +33,7 @@
                 <img class="img-fluid" src="/public/imgs/single-image2.png" alt="girl-img">
             </div>
             <div class="col-12 col-md-8">
-                
+
             </div>
         </div>
     </div>
