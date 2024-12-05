@@ -41,7 +41,7 @@ export default {
 
 <template>
     <div id="reviews">
-        <div class="container mb-2">
+        <div class="container mb-2 p-4">
             <h2 class="fw-bold text-center">Cosa ne pensano i nostri sviluppatori</h2>
             <!-- Main Wrapper -->
             <Carousel 
