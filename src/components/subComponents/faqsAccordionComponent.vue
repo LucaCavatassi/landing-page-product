@@ -83,6 +83,7 @@ export default {
 .accordion-button:hover {
     background-color: $green; // Desired open background color
     color: $white;
+    border-radius: 0!important;
 
     &::after {
         filter: brightness(0) invert(1); // Makes the icon white
