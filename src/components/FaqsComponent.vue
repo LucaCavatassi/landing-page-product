@@ -1,9 +1,11 @@
 <script>
 import FaqsAccordionComponent from './subComponents/faqsAccordionComponent.vue';
+import infoGraphsComponent from './subComponents/infoGraphsComponent.vue';
 
     export default {
         components: {
             FaqsAccordionComponent,
+            infoGraphsComponent
         },
         data() {
             return {
@@ -24,6 +26,24 @@ import FaqsAccordionComponent from './subComponents/faqsAccordionComponent.vue';
                         question: "Quanto dettagliatamente devo spiegare il mio codice alla paperella di gomma?",
                         answer: "Dovresti spiegare ogni dettaglio del tuo codice. Più sei dettagliato, più è probabile che tu scopra errori o ottenga nuove prospettive. Questo processo ti costringe a rivedere attentamente ogni parte del tuo lavoro."
                     }
+                ],
+                info: [
+                    {
+                        title: '100% Prodotto di Qualità',
+                        description: 'Abbiamo anche la possibilità di ritiro direttamente dallo stagno',
+                        logo: ''
+                    },
+                    {
+                        title: 'Spedizione Gratuita',
+                        description: 'Dal magazzino alla scrivania',
+                        logo: ''
+                    },
+                    {
+                        title: 'Rimborso Garantito',
+                        description: 'Ti rimborsiamo se la paperella fa quack',
+                        logo: ''
+                    },
+
                 ]
             }
         }
@@ -35,10 +55,15 @@ import FaqsAccordionComponent from './subComponents/faqsAccordionComponent.vue';
         <h1 class="text-uppercase fw-bold text-left text-md-center mb-4">faqs</h1>
         <div class="row">
             <div class="col-12 col-md-5 px-md-1 ">
-                <img class="img-fluid" src="/public/imgs/single-image2.png" alt="girl-img">
+                <img class="img-fluid" src="/imgs/single-image2.png" alt="girl-img">
             </div>
             <div class="col-12 col-md-7 px-md-1">
                 <FaqsAccordionComponent :questions="questions"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <infoGraphsComponent/>
             </div>
         </div>
     </div>
