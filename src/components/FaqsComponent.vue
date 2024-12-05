@@ -27,21 +27,21 @@ import infoGraphsComponent from './subComponents/infoGraphsComponent.vue';
                         answer: "Dovresti spiegare ogni dettaglio del tuo codice. Più sei dettagliato, più è probabile che tu scopra errori o ottenga nuove prospettive. Questo processo ti costringe a rivedere attentamente ogni parte del tuo lavoro."
                     }
                 ],
-                info: [
+                infos: [
                     {
                         title: '100% Prodotto di Qualità',
                         description: 'Abbiamo anche la possibilità di ritiro direttamente dallo stagno',
-                        logo: ''
+                        logo: 'balloon'
                     },
                     {
                         title: 'Spedizione Gratuita',
                         description: 'Dal magazzino alla scrivania',
-                        logo: ''
+                        logo: 'bag-heart'
                     },
                     {
                         title: 'Rimborso Garantito',
                         description: 'Ti rimborsiamo se la paperella fa quack',
-                        logo: ''
+                        logo: 'handiplast'
                     },
 
                 ]
@@ -52,20 +52,33 @@ import infoGraphsComponent from './subComponents/infoGraphsComponent.vue';
 
 <template>
     <div id="faqs" class="container my-4">
+        <!-- Head -->
         <h1 class="text-uppercase fw-bold text-left text-md-center mb-4">faqs</h1>
+        <!-- /Head -->
+
+        <!-- Accordion -->
         <div class="row">
+            <!-- Img -->
             <div class="col-12 col-md-5 px-md-1 ">
                 <img class="img-fluid" src="/imgs/single-image2.png" alt="girl-img">
             </div>
+            <!-- /Img -->
+
+            <!-- Accordion Component -->
             <div class="col-12 col-md-7 px-md-1">
                 <FaqsAccordionComponent :questions="questions"/>
             </div>
+            <!-- /Accordion Component -->
         </div>
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <infoGraphsComponent/>
+        <!-- /Accordion -->
+
+        <!-- Footer -->
+        <div class="row mt-5">
+            <div class="col-12 col-md-4" v-for="info in infos">
+                <infoGraphsComponent :info="info"/>
             </div>
         </div>
+        <!-- /Footer -->
     </div>
 </template>
 
