@@ -78,7 +78,8 @@ export default {
     </div>
 </template>
 
-<style>
+<style scoped lang="scss">
+@import '../style/general.scss';
 h2 {
     font-size: 3rem;
 }

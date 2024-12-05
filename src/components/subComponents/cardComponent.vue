@@ -31,7 +31,7 @@ export default {
     </div>
 </template>
 
-<style>
+<style scoped lang="scss">
     .r-height{
         min-height: 119px;
     }
