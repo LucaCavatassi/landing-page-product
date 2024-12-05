@@ -73,7 +73,7 @@ import infoGraphsComponent from './subComponents/infoGraphsComponent.vue';
         <!-- /Accordion -->
 
         <!-- Footer -->
-        <div class="row mt-5">
+        <div class="row my-5 pb-5">
             <div class="col-12 col-md-4" v-for="info in infos">
                 <infoGraphsComponent :info="info"/>
             </div>

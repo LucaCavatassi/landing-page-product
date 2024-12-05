@@ -85,7 +85,7 @@ export default {
             <div class="collapse navbar-collapse" id="navbars">
                 <!-- Logo + Close Button -->
                 <div class="d-flex d-md-none justify-content-between mt-2">
-                    <img src="../../public/imgs/logo.png" alt="Logo">
+                    <img src="/imgs/logo.png" alt="Logo">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
                         aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
                         <font-awesome-icon icon="close" class="fa-lg" />

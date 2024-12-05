@@ -4,6 +4,20 @@ import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination } from 'vue3-carousel';
 
 export default {
+    props: {
+        center: {
+            type: Boolean,
+            default: false,
+        },
+        even: {
+            type: [Boolean, Number],
+            default: false,
+        },
+        auto: {
+            type: Boolean,
+            default: true,
+        },
+    },
     components: {
         cardComponent,
         Carousel,
@@ -44,15 +58,8 @@ export default {
         <div class="container mb-2 p-4 pt-0">
             <h2 class="fw-bold text-center">Cosa ne pensano i nostri sviluppatori</h2>
             <!-- Main Wrapper -->
-            <Carousel 
-                :items-to-show="1" 
-                :items-to-scroll="1" 
-                :autoplay="4000" 
-                wrap-around 
-                pause-autoplay-on-hover
-                :snapAlign="center - even" 
-                :height="auto" 
-                :breakpoints="{
+            <Carousel :items-to-show="1" :items-to-scroll="1" :autoplay="4000" wrap-around pause-autoplay-on-hover
+                :snapAlign="center - even" :height="auto" :breakpoints="{
                     768: { itemsToShow: 2 }, // On tablets, show 2 items per slide
                     1024: { itemsToShow: 3 } // On desktops, show 3 items per slide
                 }">
@@ -80,6 +87,7 @@ export default {
 
 <style scoped lang="scss">
 @import '../style/general.scss';
+
 h2 {
     font-size: 2.5rem;
 }
