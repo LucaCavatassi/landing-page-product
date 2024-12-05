@@ -40,7 +40,7 @@
             </div>
             <!-- /Infotext -->
             <!-- Cards -->
-            <div class="row gx-0">
+            <div class="row gx-1">
                 <div v-for="item in items" class="col-12 col-md-4">
                     <ShopCardComponent :item="item"/>
                 </div>
