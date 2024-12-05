@@ -5,6 +5,7 @@
     import FeaturesComponent from '../components/FeaturesComponent.vue';
     import ReviewsComponent from '../components/ReviewsComponent.vue';
     import ShopComponent from '../components/ShopComponent.vue';
+    import FaqsComponent from '../components/FaqsComponent.vue'
     
     export default {
         components: {
@@ -13,7 +14,8 @@
             JumboComponent,
             FeaturesComponent,
             ReviewsComponent,
-            ShopComponent
+            ShopComponent,
+            FaqsComponent,
         },
     }
 </script>
@@ -25,11 +27,12 @@
         <FeaturesComponent/>
         <ReviewsComponent/>
         <ShopComponent/>
+        <FaqsComponent/>
     </div>
     <FooterComponent />
 </template>
 
 <style scoped lang="scss">
-@import '../style/general.scss';
+    @import '../style/general.scss';
 
 </style>
