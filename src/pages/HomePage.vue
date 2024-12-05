@@ -4,14 +4,16 @@
     import JumboComponent from '../components/JumboComponent.vue';
     import FeaturesComponent from '../components/FeaturesComponent.vue';
     import ReviewsComponent from '../components/ReviewsComponent.vue';
-
+    import ShopComponent from '../components/ShopComponent.vue';
+    
     export default {
         components: {
             HeaderComponent,
             FooterComponent,
             JumboComponent,
             FeaturesComponent,
-            ReviewsComponent
+            ReviewsComponent,
+            ShopComponent
         },
     }
 </script>
@@ -22,6 +24,7 @@
         <JumboComponent/>
         <FeaturesComponent/>
         <ReviewsComponent/>
+        <ShopComponent/>
     </div>
     <FooterComponent />
 </template>
