@@ -1,5 +1,10 @@
 <script>
+import FaqsAccordionComponent from './subComponents/faqsAccordionComponent.vue';
+
     export default {
+        components: {
+            FaqsAccordionComponent,
+        },
         data() {
             return {
                 questions: [
@@ -33,7 +38,7 @@
                 <img class="img-fluid" src="/public/imgs/single-image2.png" alt="girl-img">
             </div>
             <div class="col-12 col-md-8">
-
+                <FaqsAccordionComponent :questions="questions"/>
             </div>
         </div>
     </div>

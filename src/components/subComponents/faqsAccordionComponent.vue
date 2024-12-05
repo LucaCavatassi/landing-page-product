@@ -10,37 +10,75 @@ export default {
 </script>
 
 <template>
-    <!-- Accordion 6 - Bootstrap Brain Component -->
-    <section class="bsb-accordion-6 py-3 py-md-5 py-xl-8">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <i class="bi-apple me-2"></i>
-                                    Accordion Item #1
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
-                            </div>
-                        </div>
+    <div class="m-4">
+        <div class="accordion" id="myAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne">{{ questions[0].question }}</button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                    <div class="card-body">
+                        <p>HTML stands for HyperText Markup Language. HTML is the standard markup language for
+                            describing the structure of web pages. <a
+                                href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo">{{ questions[1].question }}</button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
+                    <div class="card-body">
+                        <p>Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web
+                            development. It is a collection of CSS and HTML conventions. <a
+                                href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/"
+                                target="_blank">Learn more.</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree">{{ questions[2].question }}</button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                    <div class="card-body">
+                        <p>CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for
+                            a given HTML element such as colors, backgrounds, fonts etc. <a
+                                href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree">{{ questions[3].question }}</button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                    <div class="card-body">
+                        <p>CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for
+                            a given HTML element such as colors, backgrounds, fonts etc. <a
+                                href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </template>
 
-<style></style>
+<style scoped lang="scss">
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    transform: scale(.7) !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+}
+</style>
