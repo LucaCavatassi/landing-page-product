@@ -11,7 +11,7 @@
 
 <template>
     <div class="text-center">
-        <svg class="icon" width="36" height="36" fill="currentColor">
+        <svg class="icon mb-3" width="36" height="36" fill="currentColor">
             <use :xlink:href="'#' + info.logo"></use>
         </svg>
         <h5 class="fw-bold">{{ info.title }}</h5>
@@ -21,5 +21,7 @@
 
 <style scoped lang="scss">
     @import '../../style/general.scss';
-
+    .icon {
+        color: $blue;
+    }
 </style>
