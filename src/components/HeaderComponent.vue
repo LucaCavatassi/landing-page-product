@@ -2,7 +2,7 @@
 export default {
     data() {
         return {
-            activeSection: 'home', // Keeps track of the currently active section
+            activeSection: 'home',
         };
     },
     methods: {
@@ -10,8 +10,7 @@ export default {
             const section = document.getElementById(sectionId);
             if (section) {
                 const offset = 150; // Adjust this value for your desired offset
-                const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-
+                const sectionTop = section.getBoundingClientRect().top + window.scrollY    
                 window.scrollTo({
                     top: sectionTop - offset, // Adjust the position by subtracting the offset
                     behavior: 'smooth', // Smooth scrolling
