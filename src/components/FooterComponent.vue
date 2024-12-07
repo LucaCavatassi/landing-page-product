@@ -13,8 +13,9 @@
                 <!-- /Info Text -->
     
                 <!-- Newsletter Form -->
-                <form class="mb-5 d-flex align-items-center" action="">
-                    <input class="ps-0 w-100 form-control" type="email" placeholder="Lascia la tua email qui..."
+                <form class="mb-5 d-flex align-items-center" action="" name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <input class="ps-0 w-100 form-control" type="email" name="email" placeholder="Lascia la tua email qui..."
                         aria-label="Email Input Newsletter">
                     <button id="newsletter-btn" type="submit">
                         <!-- SVG symbol provided by Designer -->
