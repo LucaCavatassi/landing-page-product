@@ -2,19 +2,27 @@
 export default {
     data() {
         return {
-            activeSection: '', // Keeps track of the currently active section
+            activeSection: 'home', // Keeps track of the currently active section
         };
     },
     methods: {
         scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
             if (section) {
-                section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to section
+                const offset = 150; // Adjust this value for your desired offset
+                const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+
+                window.scrollTo({
+                    top: sectionTop - offset, // Adjust the position by subtracting the offset
+                    behavior: 'smooth', // Smooth scrolling
+                });
+
                 this.activeSection = sectionId; // Set the active section
             }
         }
     },
     mounted() {
+
         const navbarTogglers = document.querySelectorAll('.navbar-toggler'); // Select both togglers
         const navbarCollapse = document.querySelector('.navbar-collapse');
         const navLinks = document.querySelectorAll('.nav-link');
@@ -51,13 +59,13 @@ export default {
 
         if (navbarTogglers) {
             navbarTogglers.forEach((toggler) => {
-                toggler.removeEventListener('click', () => {});
+                toggler.removeEventListener('click', () => { });
             });
         }
 
         if (navLinks) {
             navLinks.forEach((link) => {
-                link.removeEventListener('click', () => {});
+                link.removeEventListener('click', () => { });
             });
         }
     }
@@ -96,22 +104,28 @@ export default {
                 <!-- NavBar -->
                 <ul class="navbar-nav ms-auto mb-2 mb-md-0 custom-nav">
                     <li class="nav-item">
-                        <a :class="{ active: activeSection === 'home' }" @click.prevent="scrollToSection('home')" class="nav-link" href="#">Home</a>
+                        <a :class="{ active: activeSection === 'home' }" @click.prevent="scrollToSection('home')"
+                            class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a :class="{ active: activeSection === 'features' }" @click.prevent="scrollToSection('features')" class="nav-link" href="#">I punti di forza</a>
+                        <a :class="{ active: activeSection === 'features' }"
+                            @click.prevent="scrollToSection('features')" class="nav-link" href="#">I punti di forza</a>
                     </li>
                     <li class="nav-item">
-                        <a :class="{ active: activeSection === 'reviews' }" @click.prevent="scrollToSection('reviews')" class="nav-link" href="#">Recensioni</a>
+                        <a :class="{ active: activeSection === 'reviews' }" @click.prevent="scrollToSection('reviews')"
+                            class="nav-link" href="#">Recensioni</a>
                     </li>
                     <li class="nav-item">
-                        <a :class="{ active: activeSection === 'shop' }" @click.prevent="scrollToSection('shop')" class="nav-link" href="#">Paperelle</a>
+                        <a :class="{ active: activeSection === 'shop' }" @click.prevent="scrollToSection('shop')"
+                            class="nav-link" href="#">Paperelle</a>
                     </li>
                     <li class="nav-item">
-                        <a :class="{ active: activeSection === 'faqs' }" @click.prevent="scrollToSection('faqs')" class="nav-link" href="#">FAQs</a>
+                        <a :class="{ active: activeSection === 'faqs' }" @click.prevent="scrollToSection('faqs')"
+                            class="nav-link" href="#">FAQs</a>
                     </li>
                     <li class="nav-item">
-                        <a :class="{ active: activeSection === 'newsletter' }" @click.prevent="scrollToSection('newsletter')" class="nav-link" href="#">Newsletter</a>
+                        <a :class="{ active: activeSection === 'newsletter' }"
+                            @click.prevent="scrollToSection('newsletter')" class="nav-link" href="#">Newsletter</a>
                     </li>
                 </ul>
                 <!-- NavBar -->
