@@ -47,7 +47,7 @@
 
 .col-12 {
     height: calc(100vh / 2);
-    background-image: url(imgs/banner-bg.png);
+    background-image: url(/imgs/banner-bg.png);
     aspect-ratio: 1;
     background-size: cover; // Ensure the image covers the entire element
     background-position: center; // Center the image
