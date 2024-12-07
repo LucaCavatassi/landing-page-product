@@ -9,15 +9,16 @@
                 <!-- Info Text -->
                 <h2 class="mb-0 text-center font-size-big px-4 px-md-5 py-3 fw-bold black-text">Iscriviti per rimanere
                     aggiornato</h2>
-                <p class="fs-6 text-center">Iscriviti alla nostra newsletter per rimanere aggiornato su sconti e novità</p>
+                <p class="fs-6 text-center">Iscriviti alla nostra newsletter per rimanere aggiornato su sconti e novità
+                </p>
                 <!-- /Info Text -->
-    
+
                 <!-- Newsletter Form -->
                 <form class="mb-5 d-flex align-items-center" name="contact" method="POST" data-netlify="true" netlify>
                     <input type="hidden" name="form-name" value="contact" />
                     <input type="hidden" name="debug" value="true" />
-                    <input class="ps-0 w-100 form-control" type="email" name="email" required placeholder="Lascia la tua email qui..."
-                        aria-label="Email Input Newsletter">
+                    <input class="ps-0 w-100 form-control" type="email" name="email" required
+                        placeholder="Lascia la tua email qui..." aria-label="Email Input Newsletter">
                     <button id="newsletter-btn" type="submit">
                         <!-- SVG symbol provided by Designer -->
                         <svg class="icon" width="36" height="36" fill="currentColor">
@@ -26,7 +27,11 @@
                     </button>
                 </form>
                 <!-- /Newsletter Form -->
-    
+
+                <form name="contact" method="POST" data-netlify="true" style="display:none;">
+                    <input type="hidden" name="form-name" value="contact" />
+                </form>
+
                 <!-- Socials -->
                 <div class="ms-socials mb-4 d-flex justify-content-center gap-3">
                     <a target="_blank" href="https://github.com/LucaCavatassi/landing-page-product">
@@ -148,8 +153,9 @@ form {
     color: $green;
 
     a {
-        color: inherit!important;
+        color: inherit !important;
     }
+
     .icon {
         border: 1px solid lightgrey;
         padding: 0.5rem;
@@ -168,5 +174,4 @@ h6 {
     color: $black;
     font-weight: lighter;
 }
-
 </style>
