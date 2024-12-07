@@ -14,9 +14,7 @@
                 <!-- /Info Text -->
 
                 <!-- Newsletter Form -->
-                <form class="mb-5 d-flex align-items-center" name="contact" method="POST" data-netlify="true" netlify>
-                    <input type="hidden" name="form-name" value="contact" />
-                    <input type="hidden" name="debug" value="true" />
+                <form class="mb-5 d-flex align-items-center" name="contact" method="POST" data-netlify="true">
                     <input class="ps-0 w-100 form-control" type="email" name="email" required
                         placeholder="Lascia la tua email qui..." aria-label="Email Input Newsletter">
                     <button id="newsletter-btn" type="submit">
@@ -27,11 +25,6 @@
                     </button>
                 </form>
                 <!-- /Newsletter Form -->
-
-                <form name="contact" method="POST" data-netlify="true" style="display:none;">
-                    <input type="hidden" name="form-name" value="contact" />
-                </form>
-
                 <!-- Socials -->
                 <div class="ms-socials mb-4 d-flex justify-content-center gap-3">
                     <a target="_blank" href="https://github.com/LucaCavatassi/landing-page-product">
