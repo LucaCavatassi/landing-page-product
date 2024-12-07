@@ -13,7 +13,7 @@
                 <!-- /Info Text -->
     
                 <!-- Newsletter Form -->
-                <form class="mb-5 d-flex align-items-center" action="" name="contact" method="POST" data-netlify="true">
+                <form class="mb-5 d-flex align-items-center" name="contact" method="POST" data-netlify="true" netlify>
                     <input type="hidden" name="form-name" value="contact" />
                     <input class="ps-0 w-100 form-control" type="email" name="email" placeholder="Lascia la tua email qui..."
                         aria-label="Email Input Newsletter">
@@ -167,4 +167,5 @@ h6 {
     color: $black;
     font-weight: lighter;
 }
+
 </style>
