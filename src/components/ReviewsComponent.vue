@@ -64,6 +64,7 @@ export default {
                     1024: { itemsToShow: 3 } // On desktops, show 3 items per slide
                 }">
 
+
                 <!-- Slides -->
                 <template #slides>
                     <Slide v-for="review in reviews" :key="review">
